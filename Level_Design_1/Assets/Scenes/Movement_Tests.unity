@@ -728,8 +728,9 @@ MonoBehaviour:
   movement_speed: 12
   gravity: -2
   jump_height: 7
-  normal_Height: 3
-  crouch_Height: 0.8
+  normal_Height: 2
+  crouch_Height: 1
+  grav_Boot_Multiplier: 15
   ground_Check: {fileID: 56809167}
   ground_Distance: 0.4
   ground_Mask:
