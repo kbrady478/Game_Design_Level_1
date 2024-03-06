@@ -12,6 +12,7 @@ public class Player_Movement : MonoBehaviour
     public float movement_speed = 12f;
     public float gravity = -9.81f;
     public float jump_height = 3f;
+    public float normal_Height, crouch_Height;
     
     // Ground Check vars
     public Transform ground_Check;
@@ -41,13 +42,25 @@ public class Player_Movement : MonoBehaviour
         
         // Move player locally along axis
         Vector3 movement = transform.right * x_axis + transform.forward * z_axis;
-
         controller.Move(movement * movement_speed * Time.deltaTime);
+        
         
         // Jump
         if (Input.GetButtonDown("Jump") && is_Grounded)
         {
             velocity.y = MathF.Sqrt(jump_height * -2f * gravity);
+        }
+        
+        
+        // Crouch / Grav Boots
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            controller.height = crouch_Height;
+        }
+        
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            controller.height = normal_Height;
         }
         
         // Gravity
