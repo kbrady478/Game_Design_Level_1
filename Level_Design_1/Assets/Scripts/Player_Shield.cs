@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Player_Shield : MonoBehaviour
 {
+    //public LevelDesignProjectilePrefab projectile_Script;
+    
     //private bool shield_Toggle = false;
     public GameObject repulsor_Shield;
     public GameObject projectile;
@@ -31,16 +33,6 @@ public class Player_Shield : MonoBehaviour
         }
     }// end Update()
 
-    private void OnCollisionEnter(Collision collided)
-    {
-
-        if (collided.gameObject.CompareTag("Bastard_Projectile"))
-        {
-            Destroy(gameObject);
-            print("projectile blocked");
-        }
-    }
-
     private void Shield_On()
     {
         print("shield on"); 
@@ -56,5 +48,10 @@ public class Player_Shield : MonoBehaviour
         repulsor_Shield.SetActive(false);
         //shield_Toggle = false;
     }// end Shield_Off()
+
+    public void Reflect_Projectile()
+    {
+        Debug.Log("Projectile Reflected");
+    }// end Reflect_Projectile
     
 }// end Player_Shield

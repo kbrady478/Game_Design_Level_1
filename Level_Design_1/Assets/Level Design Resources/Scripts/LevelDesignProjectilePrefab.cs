@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class LevelDesignProjectilePrefab : MonoBehaviour
 {
+    private Player_Shield shield_Script;
+    
     public float projectileSpeed;
     public float projectileImpactRadius;
     public float projectileLifetime;
@@ -13,6 +15,8 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        shield_Script = FindObjectOfType<Player_Shield>();
+        
         //destroys the projectile after projectileLifetime amount of time
         Destroy(gameObject, projectileLifetime);
     }
@@ -22,10 +26,9 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
     {
         //moves the projectile forward
         transform.position += transform.forward * projectileSpeed * Time.deltaTime;
-        
-        
     }
     //checks if the projectile collides with an object
+    
     private void OnTriggerEnter(Collider other)
     {
         
@@ -38,9 +41,10 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
         else if (other.tag == "Shield")
         {
             Debug.Log("Hit shield");
+            Destroy(gameObject);
+            shield_Script.Reflect_Projectile();
         }
-
-      
+        
     }
     
     void Explode()
