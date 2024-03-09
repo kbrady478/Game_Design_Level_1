@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bastard
+  - Bastard_Projectile
+  - Player_Projectile
+  - Boss
   layers:
   - Default
   - TransparentFX
