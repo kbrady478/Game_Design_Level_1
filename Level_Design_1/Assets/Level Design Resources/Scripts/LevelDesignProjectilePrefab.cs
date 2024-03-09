@@ -31,19 +31,30 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        
-        if (other.tag != "Boss" && other.tag != "Shield")
+        if (gameObject.tag == "Player_Projectile")
         {
-            print("hit");
-            //if the projectile collides with an object, it will explode
-            Explode();
+            if (other.tag == "boss")
+            {
+                Debug.Log("bastard hit");
+                Explode();
+            }
         }
-        else if (other.tag == "Shield")
+        else
         {
-            Debug.Log("Hit shield");
-            Destroy(gameObject);
-            shield_Script.Reflect_Projectile();
+            if (other.tag != "Boss" && other.tag != "Shield" && other.tag != "Player_Projectile")
+            {
+                print("hit");
+                //if the projectile collides with an object, it will explode
+                Explode();
+            }
+            else if (other.tag == "Shield")
+            {
+                Debug.Log("Hit shield");
+                Destroy(gameObject);
+                shield_Script.Reflect_Projectile();
+            }
         }
+
         
     }
     

@@ -6,8 +6,10 @@ using UnityEngine;
 
 public class Player_Shield : MonoBehaviour
 {
-    //public LevelDesignProjectilePrefab projectile_Script;
+    private string change_Projectile_Tag = "Player_Projectile";
     
+    public GameObject projectile_Prefab;
+    public LevelDesignProjectileBossPrefab Boss_Script;
     //private bool shield_Toggle = false;
     public GameObject repulsor_Shield;
     public GameObject projectile;
@@ -16,7 +18,7 @@ public class Player_Shield : MonoBehaviour
     {
         if (repulsor_Shield.activeInHierarchy == true)
         {
-           // repulsor_Shield.SetActive(false);
+           repulsor_Shield.SetActive(false);
         }
     }// end Start()
 
@@ -52,6 +54,15 @@ public class Player_Shield : MonoBehaviour
     public void Reflect_Projectile()
     {
         Debug.Log("Projectile Reflected");
+        //creates a new projectile
+        GameObject projectile = Instantiate(projectile_Prefab);
+        projectile.tag = change_Projectile_Tag;
+        //sets the projectile's position and rotation to the boss's position and rotation
+        projectile.transform.position = transform.position;
+        projectile.transform.rotation = transform.rotation;
+        projectile.GetComponent<LevelDesignProjectilePrefab>().projectileSpeed = Boss_Script.projectileSpeed;
+        projectile.GetComponent<LevelDesignProjectilePrefab>().projectileImpactRadius = Boss_Script.projectileImpactRadius;
+        projectile.GetComponent<LevelDesignProjectilePrefab>().projectileLifetime = Boss_Script.projectileLifetime;
     }// end Reflect_Projectile
     
 }// end Player_Shield
