@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelDesignProjectilePrefab : MonoBehaviour
 {
     private Player_Shield shield_Script;
+    //public Shield_Reflect reflect_Script;
     
     public float projectileSpeed;
     public float projectileImpactRadius;
@@ -16,6 +17,7 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
     void Start()
     {
         shield_Script = FindObjectOfType<Player_Shield>();
+        //reflect_Script = FindObjectOfType<Shield_Reflect>();
         
         //destroys the projectile after projectileLifetime amount of time
         Destroy(gameObject, projectileLifetime);
@@ -52,10 +54,10 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
                 Debug.Log("Hit shield");
                 Destroy(gameObject);
                 shield_Script.Reflect_Projectile();
+                //reflect_Script.Reflected_Spawn();
+
             }
         }
-
-        
     }
     
     void Explode()
@@ -78,7 +80,6 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
         {
             Instantiate(explosionVisuals, transform.position, transform.rotation); //if there is an explosionVisuals object, it will be instantiated
         }
-        
         
         //destroys the projectile
         Destroy(gameObject);
