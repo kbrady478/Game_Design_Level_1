@@ -385,6 +385,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1605994000104932716, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
+      propertyPath: reflect_Script
+      value: 
+      objectReference: {fileID: 1105925431}
     - target: {fileID: 7337523698709839115, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.525185
@@ -537,6 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0eb4264b252b8419e10313f9b09d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reflect_Script: {fileID: 1105925431}
   repulsor_Shield: {fileID: 1105925429}
 --- !u!1 &2107560193
 GameObject:
