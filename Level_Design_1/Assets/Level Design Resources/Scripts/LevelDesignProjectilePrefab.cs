@@ -41,7 +41,7 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
         }
         else
         {
-            if (other.tag != "Boss" && other.tag != "Shield" && other.tag != "Player_Projectile")
+            if (other.tag != "Boss" && other.tag != "Shield" && other.tag != "Player_Projectile" && other.tag != "Bastard_Projectile")
             {
                 print("hit");
                 //if the projectile collides with an object, it will explode
