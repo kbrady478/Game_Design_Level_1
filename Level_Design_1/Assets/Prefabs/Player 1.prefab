@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4289406920534621724}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 4782054333234822734}
   - component: {fileID: 6187399710715824153}
   - component: {fileID: 1751863946944275955}
-  - component: {fileID: 7983484039699350346}
+  - component: {fileID: 1150784469833302479}
   m_Layer: 0
   m_Name: Player_Controller
   m_TagString: Player
@@ -91,7 +91,7 @@ Transform:
   m_GameObject: {fileID: 4341917997549313159}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.89054865, z: -0, w: 0.4548881}
-  m_LocalPosition: {x: -23.85, y: 1.56, z: 0}
+  m_LocalPosition: {x: -3.29, y: 1.56, z: 2.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -150,7 +150,7 @@ MonoBehaviour:
   ground_Mask:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &7983484039699350346
+--- !u!114 &1150784469833302479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,10 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0eb4264b252b8419e10313f9b09d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile_Prefab: {fileID: 8940125916336549196, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
-  Boss_Script: {fileID: 0}
+  reflect_Script: {fileID: 4453198615266222098}
   repulsor_Shield: {fileID: 7305879640960988698}
-  projectile: {fileID: 8940125916336549196, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
 --- !u!1 &6295914334456705147
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +422,7 @@ PrefabInstance:
     - target: {fileID: 7622017507094151355, guid: 888347d0fbfcc8d45897d63324768617, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 56024ff081168f944867a64fbe43b8a9, type: 2}
+      objectReference: {fileID: 2100000, guid: c5f22254d9fb34449b7d869ea9381bc8, type: 2}
     - target: {fileID: 8253271714019676380, guid: 888347d0fbfcc8d45897d63324768617, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -441,6 +439,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2398271629085033255, guid: 888347d0fbfcc8d45897d63324768617, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4453198615266222098}
     - targetCorrespondingSourceObject: {fileID: 815744380107324039, guid: 888347d0fbfcc8d45897d63324768617, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8629196551344003983}
@@ -487,3 +488,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2398271629085033255, guid: 888347d0fbfcc8d45897d63324768617, type: 3}
   m_PrefabInstance: {fileID: 4912280971073434941}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4453198615266222098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7305879640960988698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13add4403cb830f4ca6d9b928e30e770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boss_Script: {fileID: 0}
+  projectile_Prefab: {fileID: 8940125916336549196, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
+  projectile: {fileID: 8940125916336549196, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
