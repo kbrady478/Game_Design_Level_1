@@ -304,8 +304,131 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0eb4264b252b8419e10313f9b09d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile_Prefab: {fileID: 0}
+  Boss_Script: {fileID: 0}
   repulsor_Shield: {fileID: 1045251317}
   projectile: {fileID: 8940125916336549196, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
+--- !u!1001 &719404821
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.78793
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.611741
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398329805941024642, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826446966236245554, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_Name
+      value: LittleBastard
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826446966236245554, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826446966236245554, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064003123007183190, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064003123007183190, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1047197308}
+    - target: {fileID: 6064003123007183190, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: canFire
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064003123007183190, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: fireCooldown
+      value: 601.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064003123007183190, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: projectileCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064003123007183190, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: projectileSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064003123007183190, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 8940125916336549196, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
+    - target: {fileID: 6064003123007183190, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: projectileCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064003123007183190, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: projectileLifetime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064003123007183190, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: projectileImpactRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870683319985885539, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98076ffaa821b2846b2d1364ada2c462, type: 3}
 --- !u!850595691 &831642996
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -397,6 +520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0eb4264b252b8419e10313f9b09d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile_Prefab: {fileID: 0}
+  Boss_Script: {fileID: 0}
   repulsor_Shield: {fileID: 665404669}
   projectile: {fileID: 8940125916336549196, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
 --- !u!1 &1074181162
@@ -647,4 +772,5 @@ SceneRoots:
   - {fileID: 439740176}
   - {fileID: 1625080635}
   - {fileID: 1074181166}
+  - {fileID: 719404821}
   - {fileID: 200413812}
