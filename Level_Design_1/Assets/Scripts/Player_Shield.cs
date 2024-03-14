@@ -4,45 +4,106 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class Player_Shield : MonoBehaviour
 {
+    private float energy_Pool = 100;
+    private bool shield_Toggle;
+    public float recharge_Rate;
+    public float consumption_Rate;
+    public float recharge_Delay;
+    
     public Shield_Reflect reflect_Script;
     public GameObject repulsor_Shield;
     
-    
+    //private Coroutine recharge_Delay_Coroutine;
+    //private Coroutine recharger_Coroutine;
     private void Start()
     {
         if (repulsor_Shield.activeInHierarchy == true)
         {
-           repulsor_Shield.SetActive(false);
+            repulsor_Shield.SetActive(false);
         }
+
     }// end Start()
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown((int)MouseButton.Right))
+        if (Input.GetMouseButtonDown((int)MouseButton.Right) && energy_Pool > 1)
         {
-            Shield_On();
+            shield_Toggle = Shield_On();
+            
+        }
+        else if (Input.GetMouseButtonUp((int)MouseButton.Right) || energy_Pool == 0)
+        {
+            
+            Shield_Off(); 
+        }
+        else
+        {
+            StartCoroutine(energy_Recharger());
         }
 
-        if (Input.GetMouseButtonUp((int)MouseButton.Right))
+        if (shield_Toggle == true)
         {
-            Shield_Off();
+            energy_Pool -= consumption_Rate * Time.deltaTime;
         }
+
+        if (energy_Pool < 1)
+        {
+            energy_Pool = 0.7f;
+        }
+        
+        if (energy_Pool > 100)
+        {
+            energy_Pool = 100;
+        }
+        if (energy_Pool < 0)
+        {
+            energy_Pool = 0;
+        }
+        print(energy_Pool);
+        // set ui element
+
+        
     }// end Update()
 
-    private void Shield_On()
+
+    private bool Shield_On()
     {
         print("shield on"); 
         repulsor_Shield.SetActive(true);
+        energy_Pool -= consumption_Rate;
+        // To stop energy recharge while shield is on
+        StopAllCoroutines();
+        return true;
     }// end Shield_On()
 
-    private void Shield_Off()
+    private bool Shield_Off()
     {
         print("shield off");
         repulsor_Shield.SetActive(false);
+        StopAllCoroutines();
+        StartCoroutine(energy_Recharger());
+        
+        shield_Toggle = false;
+        return true;
     }// end Shield_Off()
 
+
+    IEnumerator energy_Recharger()
+    {
+        if (shield_Toggle != true)
+        {
+            yield return new WaitForSeconds(recharge_Delay);
+            if (energy_Pool < 100)
+            {
+                energy_Pool += recharge_Rate * Time.deltaTime;
+            }
+        }
+
+    }// end energy_Recharger()
+       
     public void Reflect_Projectile()
     {
         reflect_Script.Reflected_Spawn();
