@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using TMPro;
 
 public class Player_Shield : MonoBehaviour
 {
-    private float energy_Pool = 100;
+    public float energy_Pool = 100;
     private bool shield_Toggle;
     public float recharge_Rate;
     public float consumption_Rate;
@@ -15,6 +15,8 @@ public class Player_Shield : MonoBehaviour
     
     public Shield_Reflect reflect_Script;
     public GameObject repulsor_Shield;
+    
+    public TextMeshProUGUI energy_Meter_UI;
     
     //private Coroutine recharge_Delay_Coroutine;
     //private Coroutine recharger_Coroutine;
@@ -34,7 +36,7 @@ public class Player_Shield : MonoBehaviour
             shield_Toggle = Shield_On();
             
         }
-        else if (Input.GetMouseButtonUp((int)MouseButton.Right) || energy_Pool == 0)
+        else if (Input.GetMouseButtonUp((int)MouseButton.Right) || energy_Pool < 1 && energy_Pool != 0.5)
         {
             
             Shield_Off(); 
@@ -49,11 +51,6 @@ public class Player_Shield : MonoBehaviour
             energy_Pool -= consumption_Rate * Time.deltaTime;
         }
 
-        if (energy_Pool < 1)
-        {
-            energy_Pool = 0.7f;
-        }
-        
         if (energy_Pool > 100)
         {
             energy_Pool = 100;
@@ -63,8 +60,9 @@ public class Player_Shield : MonoBehaviour
             energy_Pool = 0;
         }
         print(energy_Pool);
+        
         // set ui element
-
+        energy_Meter_UI.text = "" + Mathf.RoundToInt(energy_Pool);
         
     }// end Update()
 
@@ -93,6 +91,8 @@ public class Player_Shield : MonoBehaviour
 
     IEnumerator energy_Recharger()
     {
+        if (energy_Pool < 1)
+            energy_Pool = 0.5f;
         if (shield_Toggle != true)
         {
             yield return new WaitForSeconds(recharge_Delay);
