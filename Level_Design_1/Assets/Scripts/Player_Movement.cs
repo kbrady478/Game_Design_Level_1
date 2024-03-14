@@ -15,6 +15,7 @@ public class Player_Movement : MonoBehaviour
     public float normal_Height, crouch_Height;
     // To change how much the grav boots affect player
     public float grav_Boot_Multiplier;
+    private bool grav_Boot_Active = false;
     
     // Ground Check vars
     public Transform ground_Check;
@@ -48,31 +49,33 @@ public class Player_Movement : MonoBehaviour
         
         
         // Jump
-        if (Input.GetButtonDown("Jump") && is_Grounded)
+        if (grav_Boot_Active == false)
         {
-            velocity.y = MathF.Sqrt(jump_height * -2f * gravity);
+            if (Input.GetButtonDown("Jump") && is_Grounded)
+            {
+                velocity.y = MathF.Sqrt(jump_height * -2f * gravity);
+            }
         }
-        
+
         
         // Crouch / Grav Boots
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             controller.height = crouch_Height;
             gravity = gravity * grav_Boot_Multiplier;
-            //print($"grav on crouch: {gravity}");
+            grav_Boot_Active = true;
         }
         
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             controller.height = normal_Height;
             gravity = gravity / grav_Boot_Multiplier;
-            //print($"grav off crouch: {gravity}");
+            grav_Boot_Active = false;
         }
         
         // Gravity
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
-        //print($"grav normal: {gravity}");
 
     }// end Update
     
