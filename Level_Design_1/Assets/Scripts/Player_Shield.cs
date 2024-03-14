@@ -59,7 +59,8 @@ public class Player_Shield : MonoBehaviour
         {
             energy_Pool = 0;
         }
-        print(energy_Pool);
+        
+        //print(energy_Pool);
         
         // set ui element
         energy_Meter_UI.text = "" + Mathf.RoundToInt(energy_Pool);

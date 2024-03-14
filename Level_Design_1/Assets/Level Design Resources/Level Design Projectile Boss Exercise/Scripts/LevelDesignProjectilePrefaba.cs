@@ -6,18 +6,18 @@ using UnityEngine;
 public class LevelDesignProjectilePrefab : MonoBehaviour
 {
     private Player_Shield shield_Script;
-    //public Shield_Reflect reflect_Script;
+    private Player_Stats stats_Script;
     
     public float projectileSpeed;
     public float projectileImpactRadius;
     public float projectileLifetime;
-
+    
     public GameObject explosionVisuals;
     // Start is called before the first frame update
     void Start()
     {
         shield_Script = FindObjectOfType<Player_Shield>();
-        //reflect_Script = FindObjectOfType<Shield_Reflect>();
+        stats_Script = FindObjectOfType<Player_Stats>();
         
         //destroys the projectile after projectileLifetime amount of time
         Destroy(gameObject, projectileLifetime);
@@ -73,6 +73,7 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
                 //if the sphere collides with the player, the player will take damage
                 //nearbyObject.GetComponent<PlayerHealth>().TakeDamage(10); //this requires a PlayerHealth script on the player
                 Debug.Log("Player Hit!");
+                stats_Script.dealt_Damage();
             }
         }
 
