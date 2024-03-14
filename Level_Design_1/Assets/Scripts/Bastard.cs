@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Bastard : MonoBehaviour
 {
@@ -19,12 +21,17 @@ public class Bastard : MonoBehaviour
     public float fireCooldown;
     public bool canFire;
     public GameObject projectilePrefab;
+    private NavMeshAgent navMeshAgent;
+    private float movespeed = 0.01f;
+    private float ppweeny;
     private float nextAttackTime = 0f; //time at which the enemy can attack again
 
 
     void Start()
     {
         canFire = true;
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        ppweeny = player.transform.position.y * movespeed;
     }
     void Update()
     {
@@ -51,6 +58,7 @@ public class Bastard : MonoBehaviour
             {
                 //move towards the player
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                navMeshAgent.baseOffset = ppweeny;
             }
         }
         IEnumerator FireProjectile()
