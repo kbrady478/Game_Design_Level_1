@@ -188,17 +188,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da8d7cfab101d754da92b167d88fe2aa, type: 3}
---- !u!114 &379282447 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7125195721286156187, guid: da8d7cfab101d754da92b167d88fe2aa, type: 3}
-  m_PrefabInstance: {fileID: 141703163}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43ac9a426cfc6a949b0367bcb233b3db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &439740174
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +349,7 @@ PrefabInstance:
     - target: {fileID: 4453198615266222098, guid: 5a9a5b2c261c1ff4fbd4537d628db2e9, type: 3}
       propertyPath: Boss_Script
       value: 
-      objectReference: {fileID: 379282447}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -687,7 +676,7 @@ GameObject:
   - component: {fileID: 2107560196}
   - component: {fileID: 2107560195}
   - component: {fileID: 2107560194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
