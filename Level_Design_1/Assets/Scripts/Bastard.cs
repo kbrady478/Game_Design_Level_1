@@ -39,9 +39,9 @@ public class Bastard : MonoBehaviour
             //check if the player is within stare range
             if (Vector3.Distance(transform.position, player.position) < stareRange)
             {
-                
-                //check if the enemy can attack again
-                if (Time.time > fireCooldown)
+                 
+                //check if the enemy can attack
+                if (Time.deltaTime >= 2)
                 {
                     StartCoroutine(FireProjectile());
                     //start attacking
