@@ -14,6 +14,7 @@ public class Player_Shield : MonoBehaviour
     public float recharge_Delay;
     
     public Shield_Reflect reflect_Script;
+    public Bastard_Hit bastard_Hit_Script;
     public GameObject repulsor_Shield;
     
     public TextMeshProUGUI energy_Meter_UI;
@@ -60,7 +61,7 @@ public class Player_Shield : MonoBehaviour
             energy_Pool = 0;
         }
         
-        print(energy_Pool);
+        //print(energy_Pool);
         
         // set ui element
         energy_Meter_UI.text = "" + Mathf.RoundToInt(energy_Pool);
