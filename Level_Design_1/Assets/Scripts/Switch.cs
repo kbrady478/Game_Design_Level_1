@@ -5,33 +5,34 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
-    public GameObject player;
-    public int bossHP = 102;
+    public static int bossHP = 100;
     public TextMeshProUGUI bossHPText;
     public bool bossDead;
     public int Damage = 40;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        bossHP = 100;
         bossDead = false;
     }
     private void Update()
     {
-        bossHPText.text = "BOSS HP " + bossHP;
+        bossHPText.text = "BOSS HP :" + bossHP;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other == player)
+        if (other.tag == "Player")
         {
             bossHP -= 40;
-            if(bossHP <= 0)
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            Debug.Log("HEHEHEHE");
+            if (bossHP <= 0)
             {
+                bossHP = 0;
                 bossDead = true;
             }
         }
-        Debug.Log("HEHEHEHE");
     }
     public IEnumerator DamageBoss(int Damage)
     {
