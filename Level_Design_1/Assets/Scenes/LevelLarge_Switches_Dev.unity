@@ -752,7 +752,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 41b0a24ae31f79241a4fc184f6a1da76, type: 2}
     - target: {fileID: 6554494656622040635, guid: 39a5d8587ff4fde44a5834dbc7cb76a5, type: 3}
       propertyPath: speed
-      value: 4.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6554494656622040635, guid: 39a5d8587ff4fde44a5834dbc7cb76a5, type: 3}
       propertyPath: player
@@ -764,11 +764,11 @@ PrefabInstance:
       objectReference: {fileID: 759734009}
     - target: {fileID: 6554494656622040635, guid: 39a5d8587ff4fde44a5834dbc7cb76a5, type: 3}
       propertyPath: fireCooldown
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6554494656622040635, guid: 39a5d8587ff4fde44a5834dbc7cb76a5, type: 3}
       propertyPath: rotationSpeed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6554494656622040635, guid: 39a5d8587ff4fde44a5834dbc7cb76a5, type: 3}
       propertyPath: detectionRange
@@ -776,7 +776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6554494656622040635, guid: 39a5d8587ff4fde44a5834dbc7cb76a5, type: 3}
       propertyPath: projectileCount
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6554494656622040635, guid: 39a5d8587ff4fde44a5834dbc7cb76a5, type: 3}
       propertyPath: projectileSpeed
@@ -788,7 +788,7 @@ PrefabInstance:
       objectReference: {fileID: 8940125916336549196, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
     - target: {fileID: 6554494656622040635, guid: 39a5d8587ff4fde44a5834dbc7cb76a5, type: 3}
       propertyPath: projectileCooldown
-      value: 2
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6554494656622040635, guid: 39a5d8587ff4fde44a5834dbc7cb76a5, type: 3}
       propertyPath: projectileLifetime

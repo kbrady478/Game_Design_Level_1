@@ -28,31 +28,55 @@ public class Bastard : MonoBehaviour
     }
     void Update()
     {
-        //check if the player is within detection range
-        if (Vector3.Distance(transform.position, player.position) < detectionRange)
-        {
-            //rotate towards the player
-            Vector3 direction = player.position - transform.position;
-            Quaternion rotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+        //faces the boss towards the player with turnSpeed controlling the rotation speed
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(player.position - transform.position, Vector3.up), rotationSpeed * Time.deltaTime);
 
-            //check if the player is within stare range
-            if (Vector3.Distance(transform.position, player.position) < stareRange)
+        //fires a raycast to the player of length bossViewDistance to check if the player is detected
+        //raycast is fired from the boss to the player
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, player.position - transform.position, out hit, detectionRange))
+        {
+            if (hit.transform.tag == "Player" && canFire == true)
             {
-                 
-                //check if the enemy can attack
-                if (Time.deltaTime >= 2)
-                {
-                    StartCoroutine(FireProjectile());
-                    //start attacking
-                }
+                //if the player is detected, the boss will fire a projectile
+                StartCoroutine(FireProjectile());
+
             }
             else
             {
                 //move towards the player
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
             }
+
         }
+
+
+
+        //check if the player is within detection range
+        //if (Vector3.Distance(transform.position, player.position) < detectionRange)
+        // {
+        //   //rotate towards the player
+        //  Vector3 direction = player.position - transform.position;
+        //  Quaternion rotation = Quaternion.LookRotation(direction);
+        // transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+
+        //check if the player is within stare range
+        //  if (Vector3.Distance(transform.position, player.position) < stareRange)
+        // {
+
+        //check if the enemy can attack again
+        //    if (Time.time > fireCooldown)
+        //    {
+        //        StartCoroutine(FireProjectile());
+        //start attacking
+        //    }
+        // }
+        // else
+        //  {
+        //     //move towards the player
+        //     transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        //  }
+        //  }
     }
     IEnumerator FireProjectile()
     {
