@@ -11,8 +11,8 @@ public class Bastard_Hit : MonoBehaviour
     public Bastard bastard_Controller_Script;
     //public MonoScript bastard_Shooting_Script;
     
-    public Material bastard_Material;
-    public Color hit_Color, regular_Color;
+        public Material bastard_Material;
+        public Color hit_Color, regular_Color;
     
     public void Bastard_Stun()
     {
@@ -24,8 +24,10 @@ public class Bastard_Hit : MonoBehaviour
     IEnumerator Stun_Timer()
     {
         bastard_Controller_Script.enabled = false;
-        yield return new WaitForSeconds(stun_Timer * Time.deltaTime);
+        bastard_Material.color = hit_Color;
+        yield return new WaitForSeconds(stun_Timer);
         bastard_Controller_Script.enabled = true;
+        bastard_Material.color = regular_Color;
     }
     
 }
