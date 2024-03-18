@@ -11,9 +11,15 @@ public class Bastard_Hit : MonoBehaviour
     public Bastard bastard_Controller_Script;
     //public MonoScript bastard_Shooting_Script;
     
-        public Material bastard_Material;
-        public Color hit_Color, regular_Color;
-    
+    public Material bastard_Material;
+    public Color hit_Color, regular_Color;
+
+    private void Start()
+    {
+        // stayed red between instances if I stopped during stun
+        bastard_Material.color = regular_Color;
+    }
+
     public void Bastard_Stun()
     {
         print("stun called");
