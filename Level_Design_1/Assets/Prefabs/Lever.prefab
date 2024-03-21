@@ -101,6 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e63ef392f5fefb4990726731f292732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   bossHPText: {fileID: 0}
   bossDead: 0
+  Damage: 40

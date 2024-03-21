@@ -32,6 +32,7 @@ public class Switch : MonoBehaviour
                 bossHP = 0;
                 bossDead = true;
             }
+            gameObject.GetComponent<Animator>().SetBool("isSwitched", true);
         }
     }
     public IEnumerator DamageBoss(int Damage)
