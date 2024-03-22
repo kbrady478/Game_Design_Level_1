@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7855772fb00c8534a8a87c753dcc6a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_Projectile: {fileID: 8940125916336549196}
   projectileSpeed: 0
   projectileImpactRadius: 0
   projectileLifetime: 0

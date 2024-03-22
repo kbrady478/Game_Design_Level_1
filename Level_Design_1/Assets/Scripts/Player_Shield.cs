@@ -14,6 +14,7 @@ public class Player_Shield : MonoBehaviour
     public float recharge_Delay;
     
     public Shield_Reflect reflect_Script;
+    public Bastard_Hit bastard_Hit_Script;
     public GameObject repulsor_Shield;
     
     public TextMeshProUGUI energy_Meter_UI;
@@ -92,7 +93,7 @@ public class Player_Shield : MonoBehaviour
 
     IEnumerator energy_Recharger()
     {
-        if (energy_Pool < 1)
+        if (energy_Pool < 1 && energy_Pool != 0.5f)
             energy_Pool = 0.5f;
         if (shield_Toggle != true)
         {
