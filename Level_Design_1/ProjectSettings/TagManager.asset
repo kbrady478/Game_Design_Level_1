@@ -8,6 +8,8 @@ TagManager:
   - Bastard_Projectile
   - Player_Projectile
   - Boss
+  - Shield
+  - GlassShatter
   layers:
   - Default
   - TransparentFX
