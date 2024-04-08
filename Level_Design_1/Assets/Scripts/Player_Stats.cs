@@ -50,5 +50,11 @@ public class Player_Stats : MonoBehaviour
 
         SceneManager.LoadScene(current_Scene);
     }
-    
+    public void HealPlayer(int healpoints)
+    {
+        hit_Points += healpoints;
+        hit_Points = Mathf.Clamp(hit_Points, 0, 100);
+
+    }
+
 }
