@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -51,5 +50,11 @@ public class Player_Stats : MonoBehaviour
 
         SceneManager.LoadScene(current_Scene);
     }
-    
+    public void HealPlayer(int healpoints)
+    {
+        hit_Points += healpoints;
+        hit_Points = Mathf.Clamp(hit_Points, 0, 100);
+
+    }
+
 }

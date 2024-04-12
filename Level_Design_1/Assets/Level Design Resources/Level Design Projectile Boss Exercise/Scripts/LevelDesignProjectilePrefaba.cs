@@ -7,6 +7,8 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
 {
     private Player_Shield shield_Script;
     private Player_Stats stats_Script;
+    private Bastard_Hit stun_Script;
+    public GameObject player_Projectile;
     
     public float projectileSpeed;
     public float projectileImpactRadius;
@@ -18,6 +20,7 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
     {
         shield_Script = FindObjectOfType<Player_Shield>();
         stats_Script = FindObjectOfType<Player_Stats>();
+        stun_Script = FindObjectOfType<Bastard_Hit>();
         
         //destroys the projectile after projectileLifetime amount of time
         Destroy(gameObject, projectileLifetime);
@@ -33,17 +36,18 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.tag == "Player_Projectile")
+        if (player_Projectile && player_Projectile.tag == "Player_Projectile")
         {
-            if (other.tag == "boss")
+            if (other.tag == "Bastard")
             {
                 Debug.Log("bastard hit");
+                stun_Script.Bastard_Stun();
                 Explode();
             }
         }
         else
         {
-            if (other.tag != "Boss" && other.tag != "Shield" && other.tag != "Player_Projectile")
+            if (other.tag != "Bastard" && other.tag != "Shield" && other.tag != "Player_Projectile")
             {
                 print("hit");
                 //if the projectile collides with an object, it will explode

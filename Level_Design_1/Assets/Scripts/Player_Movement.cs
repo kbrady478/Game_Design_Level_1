@@ -22,10 +22,10 @@ public class Player_Movement : MonoBehaviour
     public float ground_Distance = 0.4f;
     // To register things only in the ground layer, ie, not a player
     public LayerMask ground_Mask;
-    private bool is_Grounded;
+    public bool is_Grounded;
     
     // Gravity vars
-    private Vector3 velocity;
+    public Vector3 velocity;
     
     private void Update()
     {
