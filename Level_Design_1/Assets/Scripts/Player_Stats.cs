@@ -9,6 +9,7 @@ public class Player_Stats : MonoBehaviour
 {
     public MonoBehaviour player_Movement_Script;
     public MonoBehaviour player_Shield_Script;
+    public MonoBehaviour checkpoint_Script;
     
     public int hit_Points = 100;
     public int damage_Recieved = 30;
@@ -20,7 +21,7 @@ public class Player_Stats : MonoBehaviour
     void Update()
     {
 
-        
+      
         if (hit_Points <= 0)
             trigger_Death();
         
@@ -41,7 +42,7 @@ public class Player_Stats : MonoBehaviour
         death_Screen_UI.SetActive(true);
         
         if (Input.GetKeyDown(KeyCode.R))
-            restart_Level();
+            ;
     }
     
     public void restart_Level()
