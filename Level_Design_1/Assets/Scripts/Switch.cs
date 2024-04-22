@@ -9,6 +9,10 @@ public class Switch : MonoBehaviour
     public TextMeshProUGUI bossHPText;
     public bool bossDead;
     public int Damage = 40;
+
+    public Checkpoints checkpoint_Script;
+    public int checkpoint_Num;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,8 @@ public class Switch : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            checkpoint_Script.Change_Checkpoint(checkpoint_Num);
+            
             bossHP -= 40;
             gameObject.GetComponent<BoxCollider>().enabled = false;
             Debug.Log("HEHEHEHE");
