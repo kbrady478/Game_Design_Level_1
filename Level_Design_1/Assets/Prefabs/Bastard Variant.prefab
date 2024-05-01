@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: bastard_Speed
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6247318473544435539, guid: a82fba41a9339124d812481b3eb1f77f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

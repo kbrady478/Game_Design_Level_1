@@ -47,19 +47,20 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
         }
         else
         {
-            if (other.tag != "Bastard" && other.tag != "Shield" && other.tag != "Player_Projectile")
-            {
-                print("hit");
-                //if the projectile collides with an object, it will explode
-                Explode();
-            }
-            else if (other.tag == "Shield")
+            
+            if (other.tag == "Shield")
             {
                 Debug.Log("Hit shield");
                 Destroy(gameObject);
                 shield_Script.Reflect_Projectile();
                 //reflect_Script.Reflected_Spawn();
 
+            }
+            else if (other.tag != "Bastard" || other.tag != "Shield" || other.tag != "Player_Projectile")
+            {
+                print("hit");
+                //if the projectile collides with an object, it will explode
+                Explode();
             }
         }
     }
