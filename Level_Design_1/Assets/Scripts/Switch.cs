@@ -21,7 +21,7 @@ public class Switch : MonoBehaviour
     }
     private void Update()
     {
-        bossHPText.text = "BOSS HP :" + bossHP;
+        //bossHPText.text = "BOSS HP :" + bossHP;
     }
 
     private void OnTriggerEnter(Collider other)
