@@ -111,8 +111,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.77423656, y: 1.0469418, z: 0.5513497}
-  m_Center: {x: -0.0074650645, y: 1.0656128, z: 0.17969364}
+  m_Size: {x: 1.04, y: 1.15, z: 1.05}
+  m_Center: {x: -0.0074650645, y: 1.0656128, z: 0.45}
 --- !u!114 &-8591345997302898612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +128,5 @@ MonoBehaviour:
   bossHPText: {fileID: 0}
   bossDead: 0
   Damage: 40
+  checkpoint_Script: {fileID: 0}
+  checkpoint_Num: 0
