@@ -21,14 +21,14 @@ public class Switch : MonoBehaviour
     }
     private void Update()
     {
-        //bossHPText.text = "BOSS HP :" + bossHP;
+        bossHPText.text = "BOSS HP :" + bossHP;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            checkpoint_Script.Change_Checkpoint(checkpoint_Num);
+           // checkpoint_Script.Change_Checkpoint(checkpoint_Num);
             
             bossHP -= 40;
             gameObject.GetComponent<BoxCollider>().enabled = false;

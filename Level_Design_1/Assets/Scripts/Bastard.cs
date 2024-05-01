@@ -21,6 +21,7 @@ public class Bastard : MonoBehaviour
     public float projectileImpactRadius;
     public float fireCooldown;
     public float projectileCooldown;
+    public float avoidanceRadius;
 
     private void Start()
     {
@@ -48,6 +49,12 @@ public class Bastard : MonoBehaviour
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
             }
 
+        }
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position); 
+        if (distanceToPlayer < avoidanceRadius)
+        {
+            Vector3 avoidanceDirection = (transform.position - player.position).normalized;
+            transform.Translate(avoidanceDirection * speed * Time.deltaTime);
         }
 
 
