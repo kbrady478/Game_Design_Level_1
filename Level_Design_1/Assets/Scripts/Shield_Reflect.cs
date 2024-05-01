@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shield_Reflect : MonoBehaviour
 {
     private string change_Projectile_Tag = "Player_Projectile";
-    public LevelDesignProjectileBossPrefab Boss_Script;
+    public Bastard Boss_Script;
     public GameObject projectile_Prefab;
     public GameObject projectile;
     
