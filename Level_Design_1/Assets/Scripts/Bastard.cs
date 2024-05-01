@@ -22,6 +22,9 @@ public class Bastard : MonoBehaviour
     public float fireCooldown;
     public float projectileCooldown;
 
+    public float bastard_Speed;
+    
+    
     private void Start()
     {
         canFire = true;
@@ -45,38 +48,28 @@ public class Bastard : MonoBehaviour
             else
             {
                 //move towards the player
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                //transform.Translate(Vector3.forward * speed * Time.deltaTime);
             }
 
         }
+        
+        // Stripper pole movement
+        if (gameObject.transform.position.y < player.position.y)
+        {
+            Vector3 current_Position = transform.position;
 
+            current_Position.y += bastard_Speed * Time.deltaTime;
 
+            transform.position = current_Position;
+        }
+        else if (gameObject.transform.position.y > player.position.y)
+        {
+            Vector3 current_Position = transform.position;
 
-        //check if the player is within detection range
-        //if (Vector3.Distance(transform.position, player.position) < detectionRange)
-        // {
-        //   //rotate towards the player
-        //  Vector3 direction = player.position - transform.position;
-        //  Quaternion rotation = Quaternion.LookRotation(direction);
-        // transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+            current_Position.y -= bastard_Speed * Time.deltaTime;
 
-        //check if the player is within stare range
-        //  if (Vector3.Distance(transform.position, player.position) < stareRange)
-        // {
-
-        //check if the enemy can attack again
-        //    if (Time.time > fireCooldown)
-        //    {
-        //        StartCoroutine(FireProjectile());
-        //start attacking
-        //    }
-        // }
-        // else
-        //  {
-        //     //move towards the player
-        //     transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        //  }
-        //  }
+            transform.position = current_Position;
+        }
     }
     IEnumerator FireProjectile()
     {
