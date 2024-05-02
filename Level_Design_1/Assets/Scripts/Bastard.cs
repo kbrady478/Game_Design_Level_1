@@ -24,6 +24,9 @@ public class Bastard : MonoBehaviour
 
     public float bastard_Speed;
     
+    public AudioSource audio_Component;
+    public AudioClip audio_Clip;
+    
     
     private void Start()
     {
@@ -77,6 +80,7 @@ public class Bastard : MonoBehaviour
         //fires a projectileCount amount of projectiles
         for (int i = 0; i < projectileCount; i++)
         {
+            audio_Component.PlayOneShot(audio_Clip);
             //creates a new projectile
             GameObject projectile = Instantiate(projectilePrefab);
             //sets the projectile's position and rotation to the boss's position and rotation

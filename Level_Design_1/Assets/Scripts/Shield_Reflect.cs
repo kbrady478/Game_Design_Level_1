@@ -9,8 +9,13 @@ public class Shield_Reflect : MonoBehaviour
     public GameObject projectile_Prefab;
     public GameObject projectile;
     
+    public AudioSource audio_Component;
+    public AudioClip audio_Clip;
+    
+    
     public void Reflected_Spawn()
     {
+        audio_Component.PlayOneShot(audio_Clip);
         Debug.Log("Projectile Reflected");
         //creates a new projectile
         GameObject projectile = Instantiate(projectile_Prefab);

@@ -12,6 +12,9 @@ public class Switch : MonoBehaviour
 
     public Checkpoints checkpoint_Script;
     public int checkpoint_Num;
+
+    public AudioSource audio_Component;
+    public AudioClip audio_Clip;
     
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,7 @@ public class Switch : MonoBehaviour
         if (other.tag == "Player")
         {
             checkpoint_Script.Change_Checkpoint(checkpoint_Num);
+            audio_Component.PlayOneShot(audio_Clip);
             
             bossHP -= 40;
             gameObject.GetComponent<BoxCollider>().enabled = false;

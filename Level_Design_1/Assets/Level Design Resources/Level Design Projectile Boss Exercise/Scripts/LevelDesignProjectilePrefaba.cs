@@ -15,6 +15,11 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
     public float projectileLifetime;
     
     public GameObject explosionVisuals;
+    
+    public AudioSource audio_Component;
+    public AudioClip audio_Clip;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +73,7 @@ public class LevelDesignProjectilePrefab : MonoBehaviour
     
     void Explode()
     {
+        audio_Component.PlayOneShot(audio_Clip);
         print("exploded");
         //creates a sphere at the projectile's position with a radius of projectileImpactRadius
         Collider[] colliders = Physics.OverlapSphere(transform.position, projectileImpactRadius);
