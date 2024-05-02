@@ -535,8 +535,8 @@ MonoBehaviour:
   Boss_Script: {fileID: 0}
   projectile_Prefab: {fileID: 8940125916336549196, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
   projectile: {fileID: 8940125916336549196, guid: 6eed03a878550f04b874b0dcfc0bf1e4, type: 3}
-  audio_Component: {fileID: 0}
-  audio_Clip: {fileID: 0}
+  audio_Component: {fileID: 3303477738073903953}
+  audio_Clip: {fileID: 8300000, guid: 3f776838a0c1c164c95b17c8de0caa1f, type: 3}
 --- !u!82 &3303477738073903953
 AudioSource:
   m_ObjectHideFlags: 0
@@ -548,7 +548,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 5a25e22c4a500f74287916f9d68abd6e, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3f776838a0c1c164c95b17c8de0caa1f, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
