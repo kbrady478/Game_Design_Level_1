@@ -65,6 +65,10 @@ PrefabInstance:
       value: triple_platform_fixed
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0ced2f67c4c727d4fb6feeea6bc6c938, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ced2f67c4c727d4fb6feeea6bc6c938, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
