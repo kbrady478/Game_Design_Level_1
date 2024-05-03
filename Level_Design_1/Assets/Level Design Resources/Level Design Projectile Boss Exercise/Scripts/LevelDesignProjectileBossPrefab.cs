@@ -19,7 +19,7 @@ public class LevelDesignProjectileBossPrefab : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
+        playerPosition = GameObject.Find("Player_Controller").transform;
         canFire = true;
     }
 
@@ -40,7 +40,8 @@ public class LevelDesignProjectileBossPrefab : MonoBehaviour
                 StartCoroutine(FireProjectile());
             }
         }
-        
+
+
     }
     
     IEnumerator FireProjectile()
@@ -64,4 +65,5 @@ public class LevelDesignProjectileBossPrefab : MonoBehaviour
         yield return new WaitForSeconds(fireCooldown);
         canFire = true;
     }
+
 }
