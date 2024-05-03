@@ -185,71 +185,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2608729172891386677, guid: 0c1550246cd4be14182de8a6c4f74ff2, type: 3}
   m_PrefabInstance: {fileID: 1238835068}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &532985533
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2982543802148757975, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: player_Stats_Script
-      value: 
-      objectReference: {fileID: 1706359402}
-    - target: {fileID: 2982543802148757975, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: player_Movement_Script
-      value: 
-      objectReference: {fileID: 1706359404}
-    - target: {fileID: 6090412257016135516, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: m_Name
-      value: medkit
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903645500517508582, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903645500517508582, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903645500517508582, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 8.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903645500517508582, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903645500517508582, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903645500517508582, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903645500517508582, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903645500517508582, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903645500517508582, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903645500517508582, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 81572db7cc956e54497f21f3e609cf69, type: 3}
 --- !u!1001 &1238835068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -708,10 +643,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 337035987905745438, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: player_Stats_Script
+      value: 
+      objectReference: {fileID: 1706359402}
+    - target: {fileID: 337035987905745438, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: player_Movement_Script
+      value: 
+      objectReference: {fileID: 1706359404}
     - target: {fileID: 1930621246962954938, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
       propertyPath: checkpoint_Script
       value: 
       objectReference: {fileID: 2090600640}
+    - target: {fileID: 2795266987236556610, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: player_Stats_Script
+      value: 
+      objectReference: {fileID: 1706359402}
+    - target: {fileID: 2795266987236556610, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: player_Movement_Script
+      value: 
+      objectReference: {fileID: 1706359404}
+    - target: {fileID: 4410872811223376853, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: player_Stats_Script
+      value: 
+      objectReference: {fileID: 1706359402}
+    - target: {fileID: 4410872811223376853, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: player_Movement_Script
+      value: 
+      objectReference: {fileID: 1706359404}
     - target: {fileID: 5976549161196325941, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
       propertyPath: checkpoint_Script
       value: 
@@ -852,4 +811,3 @@ SceneRoots:
   - {fileID: 262988123864417219}
   - {fileID: 1238835068}
   - {fileID: 25863532}
-  - {fileID: 532985533}

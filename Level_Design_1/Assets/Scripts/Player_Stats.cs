@@ -17,12 +17,38 @@ public class Player_Stats : MonoBehaviour
 
     public TextMeshProUGUI shield_Energy_UI;
     public GameObject death_Screen_UI;
+
+    private bool is_Dead;
     
-    
+
+    private void Start()
+    {
+        if (death_Screen_UI.activeInHierarchy == true)
+        {
+            death_Screen_UI.SetActive(false);
+        }
+
+        is_Dead = false;
+    }
+
     void Update()
     {
-        if (hit_Points <= 0)
+        if (is_Dead == true)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                checkpoint_Script.Death_Sequence();
+                player_Movement_Script.enabled = true;
+                player_Shield_Script.enabled = true;
+                shield_Energy_UI.enabled = true;
+                hit_Points_UI.enabled = true;
+                death_Screen_UI.SetActive(false);
+            }
+        }
+        else if (hit_Points <= 0)
+        {
             trigger_Death();
+        }
         
         hit_Points_UI.text = "HP: " + hit_Points;
     }
@@ -36,19 +62,12 @@ public class Player_Stats : MonoBehaviour
     
     public void trigger_Death()
     {
+        death_Screen_UI.SetActive(true);
         player_Movement_Script.enabled = false;
         player_Shield_Script.enabled = false;
         shield_Energy_UI.enabled = false;
         hit_Points_UI.enabled = false;
-        death_Screen_UI.SetActive(true);
-        
-        if (Input.GetKeyDown(KeyCode.R))
-            checkpoint_Script.Death_Sequence();
-            player_Movement_Script.enabled = true;
-            player_Shield_Script.enabled = true;
-            shield_Energy_UI.enabled = true;
-            hit_Points_UI.enabled = true;
-            death_Screen_UI.SetActive(false);
+        is_Dead = true;
     }// end trigger_Death
     
     
@@ -56,7 +75,6 @@ public class Player_Stats : MonoBehaviour
     {
         hit_Points += healpoints;
         hit_Points = Mathf.Clamp(hit_Points, 0, 100);
-
     }
 
 }
