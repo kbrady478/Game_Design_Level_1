@@ -89,13 +89,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 4363c651d68084942a6f31b683961c89, type: 3}
     - target: {fileID: 2242117750966017738, guid: a82fba41a9339124d812481b3eb1f77f, type: 3}
+      propertyPath: fireCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242117750966017738, guid: a82fba41a9339124d812481b3eb1f77f, type: 3}
       propertyPath: bastard_Speed
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242117750966017738, guid: a82fba41a9339124d812481b3eb1f77f, type: 3}
+      propertyPath: detectionRange
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2242117750966017738, guid: a82fba41a9339124d812481b3eb1f77f, type: 3}
       propertyPath: audio_Component
       value: 
       objectReference: {fileID: 203504287438259536}
+    - target: {fileID: 2242117750966017738, guid: a82fba41a9339124d812481b3eb1f77f, type: 3}
+      propertyPath: projectileSpeed
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242117750966017738, guid: a82fba41a9339124d812481b3eb1f77f, type: 3}
+      propertyPath: projectileCooldown
+      value: 0.65
+      objectReference: {fileID: 0}
     - target: {fileID: 6247318473544435539, guid: a82fba41a9339124d812481b3eb1f77f, type: 3}
       propertyPath: m_Enabled
       value: 0
