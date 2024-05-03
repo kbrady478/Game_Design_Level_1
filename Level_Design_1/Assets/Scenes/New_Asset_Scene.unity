@@ -180,10 +180,30 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c1550246cd4be14182de8a6c4f74ff2, type: 3}
+--- !u!1 &256853799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3516748922458429198, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+  m_PrefabInstance: {fileID: 262988123864417219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &365752670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2608729172891386677, guid: 0c1550246cd4be14182de8a6c4f74ff2, type: 3}
   m_PrefabInstance: {fileID: 1238835068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &418452444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8454617766100217663, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+  m_PrefabInstance: {fileID: 262988123864417219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &889612128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8733543020891200189, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+  m_PrefabInstance: {fileID: 262988123864417219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1109694520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8400083628750855171, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+  m_PrefabInstance: {fileID: 262988123864417219}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1238835068
 PrefabInstance:
@@ -242,6 +262,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c1550246cd4be14182de8a6c4f74ff2, type: 3}
+--- !u!1 &1343403873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2564835762455242125, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+  m_PrefabInstance: {fileID: 262988123864417219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1370419722 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4838825645934976579, guid: 9419fb9e2ecf66d4b8dd50abe6be2c08, type: 3}
@@ -258,6 +283,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4341917997549313159, guid: 5a9a5b2c261c1ff4fbd4537d628db2e9, type: 3}
   m_PrefabInstance: {fileID: 1706359400}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1511988825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3533567715027952690, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+  m_PrefabInstance: {fileID: 262988123864417219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1524674857 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8073838268554217400, guid: 9419fb9e2ecf66d4b8dd50abe6be2c08, type: 3}
@@ -269,6 +299,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1604051809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4426704284290404784, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+  m_PrefabInstance: {fileID: 262988123864417219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1692409103 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9104962273950848671, guid: 9419fb9e2ecf66d4b8dd50abe6be2c08, type: 3}
@@ -552,6 +587,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9419fb9e2ecf66d4b8dd50abe6be2c08, type: 3}
+--- !u!1 &1984547631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7755803903414016770, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+  m_PrefabInstance: {fileID: 262988123864417219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2020868227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2476945809565030065, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+  m_PrefabInstance: {fileID: 262988123864417219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2090600639
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,6 +637,18 @@ MonoBehaviour:
   bastard_Controller: {fileID: 2100980895}
   player_Stats_Script: {fileID: 1706359402}
   player_Shield_Script: {fileID: 1706359403}
+  lever_Light_First:
+  - {fileID: 889612128}
+  - {fileID: 1511988825}
+  - {fileID: 256853799}
+  lever_Light_Second:
+  - {fileID: 1604051809}
+  - {fileID: 418452444}
+  - {fileID: 1109694520}
+  lever_Light_Third:
+  - {fileID: 1984547631}
+  - {fileID: 1343403873}
+  - {fileID: 2020868227}
 --- !u!4 &2090600641
 Transform:
   m_ObjectHideFlags: 0
@@ -659,6 +716,22 @@ PrefabInstance:
       propertyPath: checkpoint_Script
       value: 
       objectReference: {fileID: 2090600640}
+    - target: {fileID: 2476945809565030065, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Name
+      value: Mid Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 2476945809565030065, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564835762455242125, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Name
+      value: Mid Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564835762455242125, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2795266987236556610, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
       propertyPath: player_Stats_Script
       value: 
@@ -667,6 +740,30 @@ PrefabInstance:
       propertyPath: player_Movement_Script
       value: 
       objectReference: {fileID: 1706359404}
+    - target: {fileID: 2828823342096124456, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516748922458429198, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Name
+      value: Left Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516748922458429198, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533567715027952690, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Name
+      value: Left Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533567715027952690, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617242382257979152, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4410872811223376853, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
       propertyPath: player_Stats_Script
       value: 
@@ -675,10 +772,34 @@ PrefabInstance:
       propertyPath: player_Movement_Script
       value: 
       objectReference: {fileID: 1706359404}
+    - target: {fileID: 4426704284290404784, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Name
+      value: Right Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426704284290404784, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530430555402075058, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4546545488228780174, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976549161196325941, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: checkpoint_Num
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5976549161196325941, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
       propertyPath: checkpoint_Script
       value: 
       objectReference: {fileID: 2090600640}
+    - target: {fileID: 5996321156101897993, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: checkpoint_Num
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5996321156101897993, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
       propertyPath: checkpoint_Script
       value: 
@@ -726,6 +847,50 @@ PrefabInstance:
     - target: {fileID: 7053428309724069118, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
       propertyPath: m_Name
       value: Extended Layout
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755803903414016770, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Name
+      value: Mid Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755803903414016770, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400083628750855171, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Name
+      value: RIght Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400083628750855171, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454617766100217663, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Name
+      value: Right Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454617766100217663, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567346850784904509, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733543020891200189, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Name
+      value: Left Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733543020891200189, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793560638861410719, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921280469218751139, guid: ce6d25ec7eea57b47b80d11341ce3631, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

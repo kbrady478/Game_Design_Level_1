@@ -1736,9 +1736,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7059063693127158444}
     m_Modifications:
+    - target: {fileID: 253877517882148609, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Name
+      value: Mid Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230632606669309630, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Name
+      value: Left Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230632606669309630, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216481707788261694, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3982106794055450892, guid: 708648e7eca2edd468a9271c44081019, type: 3}
       propertyPath: m_Name
       value: Switch Room (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145446296507518387, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Name
+      value: Right Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145446296507518387, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6431613835161276464, guid: 708648e7eca2edd468a9271c44081019, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1779,6 +1803,14 @@ PrefabInstance:
     - target: {fileID: 6431613835161276464, guid: 708648e7eca2edd468a9271c44081019, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491046089943098131, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281313792345386681, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: checkpoint_Num
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1860,9 +1892,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4232974596598890726}
     m_Modifications:
+    - target: {fileID: 253877517882148609, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Name
+      value: Mid Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230632606669309630, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Name
+      value: Left Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230632606669309630, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216481707788261694, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3982106794055450892, guid: 708648e7eca2edd468a9271c44081019, type: 3}
       propertyPath: m_Name
       value: Switch Room (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145446296507518387, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Name
+      value: RIght Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145446296507518387, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6431613835161276464, guid: 708648e7eca2edd468a9271c44081019, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1903,6 +1959,14 @@ PrefabInstance:
     - target: {fileID: 6431613835161276464, guid: 708648e7eca2edd468a9271c44081019, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491046089943098131, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281313792345386681, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: checkpoint_Num
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3882,9 +3946,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6658626050555264161}
     m_Modifications:
+    - target: {fileID: 253877517882148609, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Name
+      value: Mid Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230632606669309630, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Name
+      value: Left Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230632606669309630, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216481707788261694, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3982106794055450892, guid: 708648e7eca2edd468a9271c44081019, type: 3}
       propertyPath: m_Name
       value: Switch Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145446296507518387, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Name
+      value: Right Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145446296507518387, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6431613835161276464, guid: 708648e7eca2edd468a9271c44081019, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3925,6 +4013,10 @@ PrefabInstance:
     - target: {fileID: 6431613835161276464, guid: 708648e7eca2edd468a9271c44081019, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491046089943098131, guid: 708648e7eca2edd468a9271c44081019, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8281313792345386681, guid: 708648e7eca2edd468a9271c44081019, type: 3}
       propertyPath: checkpoint_Num
