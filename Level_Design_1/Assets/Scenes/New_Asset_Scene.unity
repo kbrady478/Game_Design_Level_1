@@ -543,6 +543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Layer
       objectReference: {fileID: 0}
+    - target: {fileID: 9104962273950848671, guid: 9419fb9e2ecf66d4b8dd50abe6be2c08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

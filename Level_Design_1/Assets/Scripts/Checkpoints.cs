@@ -17,7 +17,10 @@ public class Checkpoints : MonoBehaviour
     
     public Player_Stats player_Stats_Script;
     public Player_Shield player_Shield_Script;
-    
+
+    public GameObject[] lever_Light_First = {null, null, null};
+    public GameObject[] lever_Light_Second = {null, null, null};
+    public GameObject[] lever_Light_Third = {null, null , null};
     
     private void Start()
     {
@@ -29,6 +32,7 @@ public class Checkpoints : MonoBehaviour
     public void Change_Checkpoint(int switch_Num)
     {
         current_Checkpoint = switch_Num; 
+        turn_On_Lights(switch_Num);
     }// end Change_Checkpoint
 
     public void Death_Sequence()
@@ -39,5 +43,33 @@ public class Checkpoints : MonoBehaviour
         bastard_Controller.transform.position = bastard_Start_Point.transform.position;
         player_Controller.transform.position = checkpoint_Objects[current_Checkpoint].transform.position;
     }// end Death_Sequence
+
+    private void turn_On_Lights(int switch_Num)
+    {
+        if (switch_Num == 1)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                lever_Light_First[i].SetActive(true);
+            }
+        }
+
+        if (switch_Num == 2)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                lever_Light_Second[i].SetActive(true);
+            }
+        }
+
+        if (switch_Num == 3)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                lever_Light_Third[i].SetActive(true);
+            }
+        }
+        
+    }// end turn_On_Lights
     
 }
