@@ -21,6 +21,11 @@ public class Checkpoints : MonoBehaviour
     public GameObject[] lever_Light_First = {null, null, null};
     public GameObject[] lever_Light_Second = {null, null, null};
     public GameObject[] lever_Light_Third = {null, null , null};
+
+    public GameObject jetpack_Mid;
+    public GameObject jetpack_Left;
+    public GameObject jetpack_Right;
+    
     
     private void Start()
     {
@@ -52,6 +57,8 @@ public class Checkpoints : MonoBehaviour
             {
                 lever_Light_First[i].SetActive(true);
             }
+
+            jetpack_Left.SetActive(false);
         }
 
         if (switch_Num == 2)
@@ -60,6 +67,8 @@ public class Checkpoints : MonoBehaviour
             {
                 lever_Light_Second[i].SetActive(true);
             }
+            
+            jetpack_Right.SetActive(false);
         }
 
         if (switch_Num == 3)
@@ -68,6 +77,8 @@ public class Checkpoints : MonoBehaviour
             {
                 lever_Light_Third[i].SetActive(true);
             }
+
+            jetpack_Mid.SetActive(false);
         }
         
     }// end turn_On_Lights
