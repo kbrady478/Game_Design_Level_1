@@ -14,6 +14,6 @@ public class VICTORYScript : MonoBehaviour
     }
     private void Restartscene()
     {
-        SceneManager.LoadScene("New_Asset_Airlock");
+        SceneManager.LoadScene("New_Asset_Scene");
     }
 }

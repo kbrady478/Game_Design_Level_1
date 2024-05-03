@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Switch : MonoBehaviour
 {
@@ -24,7 +25,12 @@ public class Switch : MonoBehaviour
     }
     private void Update()
     {
-        //bossHPText.text = "BOSS HP :" + bossHP;
+        bossHPText.text = "BOSS HP :" + bossHP;
+        
+        if (bossDead == true)
+        {
+            StartCoroutine(SwitchToVictoryScene());
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -52,5 +58,10 @@ public class Switch : MonoBehaviour
 
     }
 
+    public IEnumerator SwitchToVictoryScene()
+    {
+        yield return new WaitForSecondsRealtime(2);
+        SceneManager.LoadScene("VictorySCENE");
+    }
 
 }
