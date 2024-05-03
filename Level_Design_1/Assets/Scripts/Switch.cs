@@ -23,7 +23,10 @@ public class Switch : MonoBehaviour
     private void Update()
     {
         bossHPText.text = "BOSS HP :" + bossHP;
-        StartCoroutine(SwitchToVictoryScene());
+        if (bossDead == true)
+        {
+            StartCoroutine(SwitchToVictoryScene());
+        }
     }
 
     private void OnTriggerEnter(Collider other)
